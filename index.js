@@ -17,3 +17,24 @@ $(function addItem() {
           )
   })
 })
+
+$(function deleteItem() {
+  $('ul').on('click', '.shopping-item-delete', function(event){
+    this.closest('li').remove();
+  })
+})
+
+//so this code below with toggle all the items
+
+// $(function toggleItem() {
+//   $('ul').on('click', '.shopping-item-toggle', function(event){
+//     $("span.shopping-item").toggleClass( "shopping-item__checked" )
+//   })
+// })
+
+//trying to figure out how to just select the "shopping-item" I want
+$(function toggleItem() {
+  $('ul').on('click', '.shopping-item-toggle', function(event){
+    this.closest('span').toggleClass( "shopping-item__checked" )
+  })
+})
