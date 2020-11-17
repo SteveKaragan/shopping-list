@@ -1,3 +1,5 @@
+
+//need to make this work with return key .attr('aria-pressed')
 $(function addItem() {
     $('#js-shopping-list-form').submit(function (event) {
         event.preventDefault();
@@ -24,17 +26,13 @@ $(function deleteItem() {
   })
 })
 
-//so this code below with toggle all the items
-
-// $(function toggleItem() {
-//   $('ul').on('click', '.shopping-item-toggle', function(event){
-//     $("span.shopping-item").toggleClass( "shopping-item__checked" )
-//   })
-// })
-
-//trying to figure out how to just select the "shopping-item" I want
+//so this code below with toggle all the items,
+//tried this.closest('span').toggleClass( "shopping-item__checked" )
+//and several others but I cannot isolate the one correct item
 $(function toggleItem() {
   $('ul').on('click', '.shopping-item-toggle', function(event){
-    this.closest('span').toggleClass( "shopping-item__checked" )
+     $("span.shopping-item").toggleClass( "shopping-item__checked" )
   })
 })
+
+
